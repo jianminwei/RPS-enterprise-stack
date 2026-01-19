@@ -1,0 +1,85 @@
+{
+  "id": "9f610693-54ab-4a3d-890e-ec31b07d410f",
+  "prevId": "00000000-0000-0000-0000-000000000000",
+  "version": "7",
+  "dialect": "postgresql",
+  "tables": {
+    "public.game_results": {
+      "name": "game_results",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "serial",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "user_move": {
+          "name": "user_move",
+          "type": "move",
+          "typeSchema": "public",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "computer_move": {
+          "name": "computer_move",
+          "type": "move",
+          "typeSchema": "public",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "result": {
+          "name": "result",
+          "type": "result",
+          "typeSchema": "public",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "created_at": {
+          "name": "created_at",
+          "type": "timestamp",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    }
+  },
+  "enums": {
+    "public.move": {
+      "name": "move",
+      "schema": "public",
+      "values": [
+        "ROCK",
+        "PAPER",
+        "SCISSORS"
+      ]
+    },
+    "public.result": {
+      "name": "result",
+      "schema": "public",
+      "values": [
+        "WIN",
+        "LOSS",
+        "DRAW"
+      ]
+    }
+  },
+  "schemas": {},
+  "sequences": {},
+  "roles": {},
+  "policies": {},
+  "views": {},
+  "_meta": {
+    "columns": {},
+    "schemas": {},
+    "tables": {}
+  }
+}

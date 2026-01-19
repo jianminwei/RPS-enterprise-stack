@@ -1,0 +1,98 @@
+/* Modern CSS Reset & Variables */
+:root {
+  --primary: #6366f1;
+  --bg: #0f172a;
+  --card-bg: rgba(30, 41, 59, 0.9);
+  --text-main: #f8fafc;
+  --text-muted: #94a3b8;
+  --scoreboard-blue: #38bdf8; /* Vibrant Cyan-Blue */
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: radial-gradient(circle at top left, #1e1b4b, var(--bg));
+  color: var(--text-main);
+  font-family: 'Inter', system-ui, sans-serif;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.container {
+  width: 100%;
+  max-width: 500px;
+  padding: 2rem 1rem;
+}
+
+.card {
+  background: var(--card-bg);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 24px;
+  padding: 2rem;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(to right, #818cf8, #c084fc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* --- SCOREBOARD SECTION (FORCED BLUE) --- */
+.scoreboard {
+  display: flex;
+  justify-content: space-around;
+  background: #000000 !important; /* Pure Black Background */
+  padding: 1.2rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  border: 2px solid var(--scoreboard-blue);
+}
+
+.scoreboard span, 
+.scoreboard span strong {
+  color: var(--scoreboard-blue) !important; /* Forced Cyan Blue */
+  font-size: 1.1rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+/* Individual labels if you want them to stay blue regardless of result */
+.win, .loss, .draw {
+  color: var(--scoreboard-blue) !important;
+}
+
+/* --- ACTION BUTTONS --- */
+.button-group {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+button {
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 1rem;
+  border-radius: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.1s, filter 0.2s;
+}
+
+button:hover:not(:disabled) {
+  filter: brightness(1.2);
+  transform: translateY(-2px);
+}
+
+button:disabled {
+  opacity: 0.4

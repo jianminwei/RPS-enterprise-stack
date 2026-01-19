@@ -1,0 +1,36 @@
+{
+  "name": "enterprise-rps",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev:server": "tsx watch src/server/index.ts",
+    "dev:client": "vite",
+    "dev": "npm run dev:server & npm run dev:client",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "drizzle-kit migrate"
+  },
+  "dependencies": {
+    "@hono/node-server": "^1.19.9",
+    "@hono/trpc-server": "^0.4.2",
+    "@tanstack/react-query": "^5.62.7",
+    "@trpc/client": "^11.0.0-rc.648",
+    "@trpc/react-query": "^11.0.0-rc.648",
+    "@trpc/server": "^11.0.0-rc.648",
+    "@vitejs/plugin-react": "^5.1.2",
+    "drizzle-orm": "^0.38.2",
+    "hono": "^4.6.14",
+    "postgres": "^3.4.5",
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3",
+    "vite": "^7.3.1",
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "@types/react": "^19.2.8",
+    "@types/react-dom": "^19.2.3",
+    "drizzle-kit": "^0.30.1",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  }
+}
