@@ -1,5 +1,11 @@
 # Rock Paper Sissors Architecture
 
+## To run the application
+1. In VS Code, open a terminal and run "npm run dev:server"
+2. Open another terminal, and run "npm run dev:client"
+3. Open browser, run the link: http://localhost:5173/
+
+
 ## 🚀 Enterprise RPS: Full-Stack Architecture
 This project demonstrates a professional-grade "Dual-Protocol" architecture. It combines the developer velocity of tRPC with the interoperability of a REST API (Hono), all backed by a type-safe Postgres layer.
 
@@ -273,3 +279,5 @@ Because all those errors are gone, your code now has End-to-End Type Safety. Thi
         API Integrity: If you change a "Win" result to "Victory" in your Game Logic, the tRPC router will catch the mismatch across the entire app.
 
         The Compiler as an Ally: The compiler is now acting as your 24/7 automated auditor, ensuring that the frontend never sends data the backend doesn't expect.        
+
+
