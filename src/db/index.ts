@@ -4,7 +4,11 @@ import postgres from 'postgres';
 // 1. Initialize the connection 'client'
 // The ! tells TypeScript "I promise this environment variable exists"
 const connectionString = process.env.DATABASE_URL || "postgre://postgres:Elena%2301@localhost:5432/rps_db";
-const client = postgres(connectionString);
+const client = postgres(connectionString, {
+  max: 5,         // Maximum number of connections in the pool
+  connect_timeout: 5, // Wait only 5 seconds to connect
+  idle_timeout: 20,    // Close idle connections after 20 seconds
+});
 
 // 2. Wrap it with Drizzle
 export const db = drizzle(client);
