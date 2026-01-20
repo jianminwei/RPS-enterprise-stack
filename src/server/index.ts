@@ -1,3 +1,4 @@
+import 'dotenv/config'; // This must be the FIRST line
 import { Hono } from 'hono';
 import { cors } from 'hono/cors'; // Import the CORS middleware
 import { trpcServer } from '@hono/trpc-server';
